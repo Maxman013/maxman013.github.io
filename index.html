@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="utf-8">
     <title>Max's Website</title>
 </head>
 <body>
@@ -10,22 +11,25 @@
     <h1>Maximum Bots</h1>
 </div>
 <div class="w3-bar">
-  <button class="w3-bar-item w3-button w3-light-blue" style="cursor:default" onclick="href(0)" onmouseover="showBots(this)" onmouseout="hideBots(this)">Bots</button>
-    <div class="">
-    </div>
+  <button class="w3-bar-item w3-button w3-light-blue" onclick="href(0)" onmouseover="showBots()" onmouseout="hideBots()">Bots</button>
   <button class="w3-bar-item w3-button w3-light-blue" onclick="href(1)">Access Token Tool</button>
     <button class="w3-bar-item w3-button w3-light-blue" onclick="href(2)">Known Bot Issues</button>
 </div>
+    <div id="botNav" class="w3-bar" style="display:none">
+        <button class="w3-bar-item w3-button w3-gray" onclick="href(3)">PaintBot</button>
+    </div>
 
-  <p>Hi! This is a website that holds information about the bots I've created.</p>
+<div class="w3-container">
+    <p>Hi! This is a website that holds information about the bots I've created.</p>
+</div>
   
   <script>
-      function showBots(button) {
-          
+      function showBots() {
+          document.getElementById("botNav").style.display = "block";
       };
       
-      function hideBots(button) {
-          
+      function hideBots() {
+          document.getElementById("botNav").style.display = "none";
       };
       
       function href(num) {
@@ -39,6 +43,9 @@
               break;
           case 2:
               link = "issues";
+              break;
+          case 3:
+              link = "paintbot";
               break;
           };
           
