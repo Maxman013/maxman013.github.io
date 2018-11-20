@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title>Max's Website</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Max's Website</title>
 </head>
 <body>
-  <nav class="w3-container">
-    <a href="https://maxman013.github.io/token">Bot Access Token Tool</a>
-    <a href="https://maxman013.github.io/issues">Known Bot Issues</a>
-  </nav>
-  <h1>Max's Website</h1>
-  <h2>Welcome to my website</h2>
-  <p>Hello and welcome to my website. It's still WIP at the moment, and graphic design is anything BUT my passion.</p>
-  <p>Here's a list of all of my projects hosted here:</p>
-  <ul>
-    <li><a href="https://maxman013.github.io/token">Bot Access Token Tool</a></li>
-    <li><a href="https://maxman013.github.io/issues">Known Bot Issues</a></li>
-  </ul>
+
+<div class="w3-container w3-cyan">
+    <h1>Maximum Bots</h1>
+</div>
+<div class="w3-bar">
+  <button class="w3-bar-item w3-button w3-light-blue" style="cursor:default" onclick="href(0)" onmouseover="showBots(this)" onmouseout="hideBots(this)">Bots</button>
+    <div class="">
+    </div>
+  <button class="w3-bar-item w3-button w3-light-blue" onclick="href(1)">Access Token Tool</button>
+    <button class="w3-bar-item w3-button w3-light-blue" onclick="href(2)">Known Bot Issues</button>
+</div>
+
+  <p>Hi! This is a website that holds information about the bots I've created.</p>
+  
+  <script>
+      function showBots(button) {
+          
+      };
+      
+      function hideBots(button) {
+          
+      };
+      
+      function href(num) {
+          var link = "";
+          switch (num) {
+          case 0:
+              link = "bots";
+              break;
+          case 1:
+              link = "token";
+              break;
+          case 2:
+              link = "issues";
+              break;
+          };
+          
+          window.open("https://maxman013.github.io/" + link, "_self");
+      };
+  </script>
 </body>
 </html>
