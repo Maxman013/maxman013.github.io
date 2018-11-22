@@ -11,12 +11,14 @@
     <h1>Maximum Bots</h1>
 </div>
 <div class="w3-bar">
-  <button class="w3-bar-item w3-button w3-light-blue" onclick="href(0)" onmouseover="showBots()" onmouseout="hideBots()">Bots</button>
+  <button class="w3-bar-item w3-button w3-light-blue" onclick="href(0)" onmouseover="showBots()">Bots</button>
   <button class="w3-bar-item w3-button w3-light-blue" onclick="href(1)">Access Token Tool</button>
-    <button class="w3-bar-item w3-button w3-light-blue" onclick="href(2)">Known Bot Issues</button>
+    <button class="w3-bar-item w3-button w3-light-blue" onclick="href(2)">Current Bot Issues</button>
 </div>
-    <div id="botNav" class="w3-bar" style="display:none">
+    <button class="w3-bar-item w3-button w3-light-blue" onclick="href(5)">Resolved Bot Issues</button>
+    <div id="botNav" class="w3-bar" style="display:none" onmouseout="hideBots()">
         <button class="w3-bar-item w3-button w3-gray" onclick="href(3)">PaintBot</button>
+        <button class="w3-bar-item w3-button w3-gray" onclick="href(4)">LossBot 12250</button>
     </div>
 
 <div class="w3-container">
@@ -46,6 +48,12 @@
               break;
           case 3:
               link = "paintbot";
+              break;
+          case 4:
+              link = "lossbot";
+              break;
+          case 5:
+              link = "resolved";
               break;
           };
           
