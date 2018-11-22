@@ -7,21 +7,23 @@
 </head>
 <body>
 
-<div class="w3-container w3-cyan">
+<div class="w3-container w3-cyan" onmouseover="hideBots()">
     <h1>Maximum Bots</h1>
 </div>
 <div class="w3-bar">
   <button class="w3-bar-item w3-button w3-light-blue" onclick="href(0)" onmouseover="showBots()">Bots</button>
-  <button class="w3-bar-item w3-button w3-light-blue" onclick="href(1)">Access Token Tool</button>
-    <button class="w3-bar-item w3-button w3-light-blue" onclick="href(2)">Current Bot Issues</button>
+  <button class="w3-bar-item w3-button w3-light-blue" onclick="href(1)" onmouseover="hideBots()">Access Token Tool</button>
+    <button class="w3-bar-item w3-button w3-light-blue" onclick="href(2)" onmouseover="hideBots()">Current Bot Issues</button>
+    <button class="w3-bar-item w3-button w3-light-blue" onclick="href(5)" onmouseover="hideBots()">Resolved Bot Issues</button>
 </div>
-    <button class="w3-bar-item w3-button w3-light-blue" onclick="href(5)">Resolved Bot Issues</button>
-    <div id="botNav" class="w3-bar" style="display:none" onmouseout="hideBots()">
+    <div id="botNav" class="w3-bar" style="display:none">
         <button class="w3-bar-item w3-button w3-gray" onclick="href(3)">PaintBot</button>
         <button class="w3-bar-item w3-button w3-gray" onclick="href(4)">LossBot 12250</button>
+        <button class="w3-bar-item w3-button w3-gray" onclick="href(6)">CountryBot 0208</button>
+        <button class="w3-bar-item w3-button w3-gray" onclick="href(7)">CommentBot 2005</button>
     </div>
 
-<div class="w3-container">
+<div class="w3-container" onmouseover="hideBots()">
     <p>Hi! This is a website that holds information about the bots I've created.</p>
 </div>
   
@@ -54,6 +56,12 @@
               break;
           case 5:
               link = "resolved";
+              break;
+          case 6:
+              link = "countrybot";
+              break;
+          case 7:
+              link = "commentbot";
               break;
           };
           
